@@ -1,6 +1,8 @@
-Hi! This is the repository for my personal website.
+## About
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is the repository for my personal website! It was created with [Next.js](https://nextjs.org/) and [React](https://react.dev) and is currently deployed using [Vercel](https://vercel.com).
+
+See the live site at [https://justincai.vercel.app/](https://justincai.vercel.app/)!
 
 ## Running Locally
 

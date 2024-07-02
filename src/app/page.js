@@ -139,12 +139,12 @@ export default function Home() {
                 alt: "Personal website",
               }}
               // date="2024"
-              projectName="justinqcai.com"
+              projectName="justincai.vercel.app"
               // company="Capital One"
-              link="https://justinqcai.com"
+              link="https://justincai.vercel.app"
             >
               Built a website using Next.js and React to display my resume and
-              interests.
+              interests - deployed using Vercel.
             </Tile>
           </ul>
         </section>
