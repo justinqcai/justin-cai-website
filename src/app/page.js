@@ -131,7 +131,7 @@ export default function Home() {
           </ol>
         </section>
         <section id="projects">
-          <h1>Experience</h1>
+          <h1>Projects</h1>
           <ul>
             <Tile
               picture={{
