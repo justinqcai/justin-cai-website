@@ -2,47 +2,34 @@
 import styles from "./page.module.css";
 import { useEffect, useState } from "react";
 import Tile from "@components/tile";
-import SocialMediaTile from "./_components/socialMediaTile";
-import portfolioPic from "../../public/portfolio.png";
-import githubIcon from "../../public/github-icon.png";
-import linkedinIcon from "../../public/linkedin-icon.png";
+import SocialMediaTile from "@components/socialMediaTile";
+import portfolioPic from "@public/portfolio.png";
+import githubIcon from "@public/github-icon.png";
+import linkedinIcon from "@public/linkedin-icon.png";
+import NavTile from "@components/navTile";
 
 export default function Home() {
   const [current, setCurrent] = useState("about");
-  console.log(current);
 
   function listenScrollEvent(e) {
     const experience = document.getElementById("experience");
     const projects = document.getElementById("projects");
     const about = document.getElementById("about");
-    console.log(
-      about.offsetTop,
-      experience.offsetTop,
-      projects.offsetTop,
-      window.scrollY
-    );
 
-    // const rightpanel = document.getElementById("rightpanel");
-
-    // console.log(experience.isScrolledIntoView);
-    // console.log(rightpanel);
-    // console.log(window.scrollY);
     if (experience.offsetTop - 100 > window.scrollY) {
       setCurrent("about");
     } else if (
       window.scrollY >= experience.offsetTop - 100 &&
       projects.offsetTop - 100 > window.scrollY
     ) {
-      // console.log(window.scrollY > experience.offsetTop - 96);
       setCurrent("experience");
-    } else {
-      // console.log(window.scrollY > projects.offsetTop);
-      setCurrent("projects");
     }
+    // else {
+    //   setCurrent("projects");
+    // }
   }
 
   useEffect(() => {
-    // window.removeEventListener("scroll", listenScrollEvent);
     window.addEventListener("scroll", listenScrollEvent);
     return function () {
       window.removeEventListener("scroll", listenScrollEvent);
@@ -60,33 +47,9 @@ export default function Home() {
           <p>A man of many interests... mostly building technology.</p>
           <nav>
             <ul className={`${styles.navBar}`}>
-              <li>
-                <a
-                  href="#about"
-                  className={current == "about" ? `${styles.current}` : ``}
-                >
-                  <span className={`${styles.indicator}`}></span>
-                  <span>About</span>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#experience"
-                  className={current == "experience" ? `${styles.current}` : ``}
-                >
-                  <span className={`${styles.indicator}`}></span>
-                  <span>Experience</span>
-                </a>
-              </li>
-              {/* <li>
-                <a
-                  href="#projects"
-                  className={current == "projects" ? `${styles.current}` : ``}
-                >
-                  <span className={`${styles.indicator}`}></span>
-                  <span>Projects</span>
-                </a>
-              </li> */}
+              <NavTile current={current} sectionName="about" />
+              <NavTile current={current} sectionName="experience" />
+              {/* <NavTile current={current} sectionName="projects" /> */}
             </ul>
           </nav>
         </div>
@@ -168,6 +131,7 @@ export default function Home() {
           </ol>
         </section>
         <section id="projects">
+          <h1>Experience</h1>
           <ul>
             <Tile
               picture={{
@@ -198,7 +162,7 @@ export default function Home() {
             <a href="https://brittanychiang.com/" target="_blank">
               Brittany Chiang
             </a>
-            .
+            . Deployed using <a href="https://vercel.com">Vercel</a>.
           </p>
         </footer>
       </div>

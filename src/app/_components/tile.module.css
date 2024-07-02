@@ -34,13 +34,15 @@
 }
 
 .image {
-  border: 0 solid gray;
+  border: 2px solid lightgray;
   border-radius: 0.25rem;
+
   /* z-index: 10; */
 }
 
 .hover:hover + .leftPane > .image {
-  border-width: 0.05rem;
+  /* border-width: 2px; */
+  border-color: rgb(78, 78, 78);
 }
 
 .hover:hover ~ .rightPane > h1 {
@@ -49,8 +51,11 @@
 
 @media (prefers-color-scheme: dark) {
   .image {
-    color-scheme: dark;
-    border-color: rgb(255, 255, 255);
+    border-color: rgb(211, 211, 211, 0.1);
+  }
+
+  .hover:hover + .leftPane > .image {
+    border-color: gray;
   }
 
   .hover:hover ~ .rightPane > h1 {
