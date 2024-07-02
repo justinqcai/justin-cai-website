@@ -1,0 +1,9 @@
+.tile {
+  /* padding-right: 2.5%; */
+  opacity: 0.5;
+  width: 2rem;
+}
+
+.tile:hover {
+  opacity: 1;
+}
