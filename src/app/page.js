@@ -94,20 +94,35 @@ export default function Home() {
               jobTitle="Software Engineer"
               company="Capital One"
               link="https://capitalone.com"
+              skills={[
+                "Java",
+                "Spring Boot",
+                "AWS",
+                "Karate",
+                "Splunk",
+                "SQL",
+                "REST APIs",
+              ]}
             >
-              Refactored 30,000+ lines of code to significantly improve
-              architectural design and efficiency of REST APIs. Upgraded
-              large-scale microservices (2.7MM+ unique customers per month) to
+              Upgraded high-volume APIs (2.7MM+ unique customers per month) to
               use serverless computing, saving over 15 hours of developer time a
-              month and cutting compute costs by 10%. Coordinated with Product
-              and Cyber teams to identify and fix 200+ potential security and
-              fraud vulnerabilities.
+              month and cutting costs by 10%. Implemented and A/B tested an
+              integration of Sign In and Forgot Username, increasing login
+              success rate by 15%. Won Capital One’s 2023 Q4 TechX Award for
+              differentiated excellence in driving impactful tech results.
             </Tile>
             <Tile
               date="2022 - Present"
               jobTitle="Associate Software Engineer"
               company="Capital One"
               link="https://capitalone.com"
+              skills={[
+                "Kotlin",
+                "Android SDK",
+                "Espresso",
+                "Jenkins",
+                "Tableau",
+              ]}
             >
               Integrated a document upload plugin with the dispute filing flow
               in Capital One Mobile, enabling customers to securely upload proof
@@ -123,6 +138,7 @@ export default function Home() {
               jobTitle="Software Engineering Intern"
               company="Capital One"
               link="https://capitalone.com"
+              skills={["Java", "Spring Boot", "AWS", "Karate", "REST APIs"]}
             >
               Conducted thorough analysis and documentation of legacy API
               backends, detailing backend calls, response timeouts, expected
@@ -138,10 +154,9 @@ export default function Home() {
                 src: portfolioPic,
                 alt: "Personal website",
               }}
-              // date="2024"
               projectName="justincai.vercel.app"
-              // company="Capital One"
               link="https://justincai.vercel.app"
+              skills={["React", "Next.js", "HTML & CSS"]}
             >
               Built a website using Next.js and React to display my resume and
               interests - deployed using Vercel.

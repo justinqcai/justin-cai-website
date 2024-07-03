@@ -9,6 +9,7 @@ function Tile({
   company,
   picture,
   projectName,
+  skills,
   children,
 }) {
   // const { link, date, jobTitle, company } = job;
@@ -37,6 +38,15 @@ function Tile({
             </h1>
 
             <p>{children}</p>
+            {skills ? (
+              <ul className={styles.skillList}>
+                {skills.map((s) => (
+                  <li key={s}>{s}</li>
+                ))}
+              </ul>
+            ) : (
+              ""
+            )}
           </div>
         </div>
       </a>

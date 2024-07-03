@@ -85,3 +85,26 @@
   font-size: 0.9rem;
   opacity: 0.75;
 }
+
+.skillList {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: row;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.skillList > li {
+  border-radius: 1rem;
+  background-color: rgba(0, 128, 128, 0.123);
+  padding: 0.3rem 0.7rem;
+  color: teal;
+  font-size: 0.75rem;
+}
+
+@media (prefers-color-scheme: dark) {
+  .skillList > li {
+    color: turquoise;
+    background-color: rgba(64, 224, 208, 0.123);
+  }
+}
